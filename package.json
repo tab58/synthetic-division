@@ -1,6 +1,6 @@
 {
   "name": "synthetic-division",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Synthetic division of polynomials.",
   "main": "index.js",
   "scripts": {
