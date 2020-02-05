@@ -1,4 +1,9 @@
-'use strict';
+interface SyntheticDivisionOutput {
+  /** The quotient of the division. */
+  q: number[];
+  /** The remainder of the division. */
+  r: number[];
+}
 
 /**
  * Computes synthetic division of polynomials. Polynomial degrees n >= m.
@@ -6,7 +11,7 @@
  * @param {number[]} D Polynomial such that d[0]*x^m + d[1]*x^{m-1} + ... + d[m]*x + d[m+1]
  * @returns {Object} Computed quotient and remainder.
  */
-const synthDiv = function (P, D) {
+export default function synthDiv(P: number[], D: number[]): SyntheticDivisionOutput {
   // do input validation check
   const n = P.length - 1;
   const m = D.length - 1;
@@ -25,8 +30,6 @@ const synthDiv = function (P, D) {
   }
   return {
     q: Q.slice(0, q),
-    r: Q.slice(q)
+    r: Q.slice(q),
   };
-};
-
-module.exports = synthDiv;
+}

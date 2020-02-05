@@ -1,8 +1,5 @@
-'use strict';
-/* globals describe it */
-const expect = require('chai').expect;
-
-const synthDiv = require('./index.js');
+import { expect } from 'chai';
+import synthDiv from '../src/index';
 
 describe('Synthetic Division', () => {
   it('Degree 1 Divisor', () => {
